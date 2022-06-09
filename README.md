@@ -1,4 +1,22 @@
-# iles-excerpt-test
+# Îles Excerpt Test
+
+This is an example project isloating unreliable behavior
+in the `@islands/excerpt` module.
+
+## Observed issues:
+
+On a fresh dev instance, with only `modules: ['@islands/excerpt']` in config
+Excerpt is only added to the first content item `example-a`
+
+After a change to a source file the excerpt for `example-a` is lost
+(no items have excerpts), seemingly due to rebuild + HMR.
+
+On a second run of dev instance, with only `modules: ['@islands/excerpt']` in config
+Excerpt is not added to any content items.
+
+All content is excerpted as expected on build.
+
+# Îles default setup (from `npm create iles@next`)
 
 [îles]: https://github.com/ElMassimo/iles
 [configuration reference]: https://iles-docs.netlify.app/config
